@@ -1,0 +1,64 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ten Desires</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" href="assets/icon.webp" />
+    </head>
+
+    <body>
+        <!-- Música de fondo -->
+        <audio id="backgroundMusic" src="assets/bg.mp3" autoplay loop></audio>
+        <div id="musicControls" class="text-center mt-3">
+            <button onclick="toggleMusic()">Pausar/Reproducir Música</button>
+        </div>
+
+        <!-- Header con título e imagen representativa -->
+        <header class="text-center p-3">
+            <h1 class="glow">Bullet Hell</h1>
+            <img src="assets/icon.webp" alt="Icono del juego">
+        </header>
+
+        <!-- Sección principal del juego -->
+        <main class="container mt-3">
+            <div class="row">
+                <div class="col-md-9">
+                    <!-- Canvas donde se desarrollará el juego -->
+                    <canvas id="gameCanvas" width="800" height="800"></canvas>
+                </div>
+                <div class="col-md-3" id="hud">
+                    <!-- Contador de Puntos y Temporizador -->
+                    <div id="scoreDisplay" class="mb-3 glow">
+                        <h2>Puntuación: <span id="score">0</span></h2>
+                    </div>
+                    <div id="livesDisplay" class="mb-3 glow">
+                        <h2>Vidas: <span id="livesCount">3</span></h2>
+                    </div>
+                    <div id="timerDisplay" class="mb-3 glow">
+                        <h2>Tiempo entre stage: <span id="timer">03:00</span></h2>
+                    </div>
+                    <!-- Instrucciones del juego -->
+                    <div id="instructions" class="mt-3">
+                        <h5>Instrucciones</h5>
+                        <p>Usa el mouse para eliminar enemigos y esquiva los proyectiles.</p>
+                        <h5>Usa WASD para moverte</h5>
+                        <h5>Usa C para esquivar e ir mas lento</h5>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Pie de página con créditos -->
+        <footer>
+            <p>Desarrollado por Juan Pablo Montufar Ruiz 22200753</p>
+        </footer>
+
+        <!-- Archivo JavaScript para el juego -->
+        <script src="game.js"></script>
+    </body>
+
+    </html>
